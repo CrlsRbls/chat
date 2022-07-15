@@ -1,0 +1,12 @@
+<div class= "container">
+<h1>TurboChat</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if current_user %>
+   <%= link_to 'Start Chatting', rooms_path %>
+   <%= button_to "Logout", destroy_user_session_path, method: :delete%>
+<% else %>
+   <%= link_to 'Login', new_user_session_path %>
+   <%= link_to 'Register', new_user_registration_path %>
+<% end %>
+</div>
